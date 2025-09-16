@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoGo Weather Forecast</title>
+  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="./css/mystyle.css" />
+</head>
+
+<body>
+  <!-- Start Header -->
+  <section id="headerId" class="py-5 bg-body-info">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="branding" href="#">
+        <div class="d-flex align-items-center">
+          <img src="./images/logo.png" class="logo" alt="" />
+          <div class="logo-type">
+            <h1 class="site-title">Weather</h1>
+            <small class="site-description">tagline goes here</small>
+          </div>
+        </div>
+      </a>
+      <div>
+        <ul class="d-flex list-unstyled mb-0">
+          <li class="menu-item rounded-pill rounded-pill current">
+            <a class="" href="#">Home</a>
+          </li>
+          <li class="menu-item rounded-pill">
+            <a class="" href="#">News</a>
+          </li>
+          <li class="menu-item rounded-pill">
+            <a class="" href="#">Live Cameras</a>
+          </li>
+          <li class="menu-item rounded-pill">
+            <a class="" href="#">Photos</a>
+          </li>
+          <li class="menu-item rounded-pill">
+            <a class="" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Start Main -->
+  <main id="mainId" class="py-5 position-relative">
+    <picture>
+      <img src="./images/banner.png" class="w-100" alt="" />
+    </picture>
+    <div class="input-group mb-3 w-75 mx-auto my-5 position-absolute translate-middle-x start-50 input-Shift">
+      <input id="searchInput" type="text" class="text-white w-100 rounded-pill" placeholder="Find your location..." />
+
+    </div>
+
+    <!-- Cards -->
+    <div class="container">
+      <div class="row">
+        <!-- Day one -->
+        <div class="col-md-4">
+          <div class="rounded-start-3 forecast-body">
+            <div id="todayDate" class="forecast-header d-flex flex-row justify-content-between align-items-center  ">
+              <!-- Add Dates -->
+            </div>
+            <div class="forecast-content d-flex flex-column py-3">
+              <div class="text-center">
+                <div id="cityLocation" class="location">
+                  
+                </div>
+
+                <div id="todayTmp" class="today-temp">
+                  
+                </div>
+              </div>
+
+
+              <div class="d-flex flex-row justify-content-evenly align-items-center my-4">
+                <div>
+                  <img id="todayIcon" src="" class="w-75" alt="">
+                </div>
+                <div id="todayCondition" class="text-info"></div>
+              </div>
+
+              <div class="forecast-footer d-flex flex-row justify-content-evenly  align-items-center border-top-1 pt-3">
+                <div class="d-flex flex-column text-center">
+                  <div class="pb-2">
+                    <img src="./images/icon-umberella.png" class="w-100" alt="">
+                  </div>
+                  <div id="rainChance" class="fontColor"></div>
+                </div>
+                <div class="d-flex flex-column text-center">
+                  <div class="pb-2">
+                    <img src="./images/icon-wind.png" class="w-50" alt="">
+                  </div>
+                  <div id="windSpeed" class="fontColor"></div>
+                </div>
+                <div class="d-flex flex-column text-center">
+                  <div class="pb-2">
+                    <img src="./images/icon-compass.png" class="w-100" alt="">
+                  </div>
+                  <div id="windDirection" class="fontColor"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day two -->
+        <div class="col-md-4">
+          <div class="forecast-body-middle">
+            <div id="tomDate" class="forecast-header text-center">
+              <!-- Add Dates -->
+            </div>
+
+            <div class="forecast-content d-flex flex-column py-5 text-center justify-content-evenly align-items-center">
+              <div class="text-center">
+                <div>
+                  <img id="tomIcon" src="" class="w-75" alt="">
+                </div>
+
+                <div id="tomMaxTemp" class="max-temp fw-bold mt-5">
+                  34<sup>o</sup>C
+                </div>
+                <div id="tomMinTemp" class="min-temp mb-3">
+                  21<sup>o</sup>C
+                </div>
+                <div id="tomState" class="text-info">clear</div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Day three -->
+        <div class="col-md-4">
+          <div class="forecast-body">
+            <div id="atmDate" class="forecast-header text-center">
+              <!-- Add Dates -->
+            </div>
+
+            <div class="forecast-content d-flex flex-column py-5 text-center justify-content-evenly align-items-center">
+              <div class="text-center">
+                <div>
+                  <img id="atmIcon" src="" class="w-75" alt="">
+                </div>
+
+                <div id="atmMaxTemp" class="max-temp fw-bold mt-5">
+                  34<sup>o</sup>C
+                </div>
+                <div id="atmMinTemp" class="min-temp mb-3">
+                  21<sup>o</sup>C
+                </div>
+                <div id="atmState" class="text-info">clear</div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+  </main>
+
+  <footer class="color3 py-5 px-3">
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col-md-8 position-relative px-0 mb-5 mb-md-0">
+          <input type="text" placeholder="Enter your email" name="subscribe" id="subscribe"
+            class="text-white w-100 rounded-pill" />
+
+          <button class="btn btn-info rounded-pill py-2 text-white fw-bold">
+            Subscribe
+          </button>
+        </div>
+
+        <ul class="col-md-4 list-unstyled d-flex justify-content-center align-items-center m-0 p-0">
+          <li>
+            <i
+              class="fa fa-brands fa-facebook-f me-2 bg-icon d-flex justify-content-center align-items-center rounded-circle"></i>
+          </li>
+          <li>
+            <i
+              class="fa fa-brands fa-twitter me-2 bg-icon d-flex justify-content-center align-items-center rounded-circle"></i>
+          </li>
+          <li>
+            <i
+              class="fa fa-brands fa-google-plus-g me-2 bg-icon d-flex justify-content-center align-items-center rounded-circle"></i>
+          </li>
+          <li>
+            <i
+              class="fa fa-brands fa-pinterest me-2 bg-icon d-flex justify-content-center align-items-center rounded-circle"></i>
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-white-50 lead mt-4 fs-6">
+        Copyright 2014 Company name. Designed by Themezy. All rights reserved
+      </p>
+    </div>
+  </footer>
+  <!-- JS Links -->
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
