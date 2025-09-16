@@ -29,7 +29,7 @@ let atmState = document.getElementById("atmState");
 // Fetch Data
 async function getData(location) {
     let response = await fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=3bfb758e8ad743dc81475658251409&q=${location}&days=3`
+        `https://api.weatherapi.com/v1/forecast.json?key=3bfb758e8ad743dc81475658251409&q=${location}&days=3`
     );
     let data = await response.json();
     if (!response.ok) return null;
