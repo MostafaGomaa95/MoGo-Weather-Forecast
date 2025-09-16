@@ -78,7 +78,8 @@ async function setForecast(searchLocation = "cairo") {
 function setDayOne(dOne) {
     cityLocation.innerHTML = dOne.location.name;
     todayTmp.innerHTML = `${dOne.current.temp_c} <sup>o</sup> C`;
-    todayIcon.src = dOne.current.condition.icon;
+    const icon = dOne.current.condition.icon;
+    todayIcon.src = getIconURL(icon);
     todayCondition.innerHTML = dOne.current.condition.text;
     rainChance.innerHTML = `${dOne.forecast.forecastday[0].day.daily_chance_of_rain} %`;
     windSpeed.innerHTML = `${dOne.current.wind_kph} km/h`;
@@ -86,17 +87,23 @@ function setDayOne(dOne) {
 
 }
 function setDayTwo(dTwo) {
-    tomIcon.src = dTwo.day.condition.icon;
+    const icon = dTwo.day.condition.icon;
+    tomIcon.src = getIconURL(icon);
     tomMaxTemp.innerHTML = `${dTwo.day.maxtemp_c} <sup>o</sup> C`;
     tomMinTemp.innerHTML = `${dTwo.day.mintemp_c} <sup>o</sup> C`;
     tomState.innerHTML = dTwo.day.condition.text;
 
 }
 function setDayThree(dThree) {
-    atmIcon.src = dThree.day.condition.icon;
+    const icon = dThree.day.condition.icon;
+    atmIcon.src = getIconURL(icon);
     atmMaxTemp.innerHTML = `${dThree.day.maxtemp_c} <sup>o</sup> C`;
     atmMinTemp.innerHTML = `${dThree.day.mintemp_c} <sup>o</sup> C`;
     atmState.innerHTML = dThree.day.condition.text;
+}
+
+function getIconURL(iconPath) {
+    return iconPath.startsWith("//") ? `https:${iconPath}` : iconPath;
 }
 
 // Run Logic
